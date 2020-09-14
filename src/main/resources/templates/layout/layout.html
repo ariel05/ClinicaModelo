@@ -4,7 +4,6 @@
 <!-- HEAD LAYOUT -->
 <head th:fragment="head">
 <meta charset="utf-8"/>
-
 <script src="js/jquery.js"></script>
 <script
 	src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
@@ -23,8 +22,17 @@
 
 	<div class="shadow-none pt-2 pb-2 mb-1 bg-light rounded col-12" id="navegador" th:fragment="navegador">
 		  <nav class="text-center row">
-		  	<div class="col-4">
-				<ul class="navbar-nav col-4 offset-4">
+		  	<div class="col-6 col-sm-3">
+				<ul class="navbar-nav col-sm-4 offset-sm-4">
+				    <li class="nav-item dropdown">
+				      <a class="nav-link " href="/">
+				        Home
+				      </a>
+				    </li>
+				</ul>
+		  	</div>
+		  	<div class="col-6 col-sm-3">
+				<ul class="navbar-nav col-sm-4 offset-sm-4">
 				    <li class="nav-item dropdown">
 				      <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
 				        Ambulatorio
@@ -35,8 +43,8 @@
 				    </li>
 				</ul>
 		  	</div>
-		  	<div class="col-4">
-				<ul class="navbar-nav col-4 offset-4">
+		  	<div class="col-6 col-sm-3">
+				<ul class="navbar-nav col-sm-4 offset-sm-4">
 				    <li class="nav-item dropdown">
 				      <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
 				        Internaciones
@@ -50,8 +58,8 @@
 				    </li>
 			    </ul>
 		  	</div>
-		  	<div class="col-4">
-				<ul class="navbar-nav col-4 offset-4">
+		  	<div class="col-6 col-sm-3">
+				<ul class="navbar-nav col-sm-4 offset-sm-4">
 				    <li class="nav-item dropdown">
 				      <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
 				        Auditoría

@@ -1,3 +1,7 @@
 #navegador, #pie{
-	border-top : solid 5px #4E8AD9;
+	border-top : solid 2.5px #4E8AD9;
+}
+
+#pie{
+	border-bottom : solid 2.5px #4E8AD9;
 }

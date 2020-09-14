@@ -1,68 +1,15 @@
 <!doctype>
 <html  xmlns:th="http://www.thymeleaf.org">
-<head th:fragment="head">
-<title>Medicinal - Home</title>
-<meta charset="utf-8"/>
-
-<script src="js/jquery.js"></script>
-<script
-	src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
-<link rel="stylesheet"
-	href="css/bootstrap.min.css">
-<script
-	src="js/bootstrap.min.js"></script>
-
-<link rel="icon" href="img/favicon.ico" type="image/x-icon">
-
-<link rel="stylesheet"
-	href="css/index/index.css">
+<head th:replace="layout/layout :: head">
+	<title>Medicinal - Home</title>
 </head>
 
 <body>
-	<div class="shadow-none pt-2 pb-2 mb-1 bg-light rounded col-12" id="navegador" th:fragment="navegador">
-		  <nav class="text-center row">
-		  	<div class="col-4">
-				<ul class="navbar-nav col-4 offset-4">
-				    <li class="nav-item dropdown">
-				      <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
-				        Ambulatorio
-				      </a>
-				      <div class="dropdown-menu">
-				        <a class="dropdown-item" href="#">Solicitud</a>
-				      </div>
-				    </li>
-				</ul>
-		  	</div>
-		  	<div class="col-4">
-				<ul class="navbar-nav col-4 offset-4">
-				    <li class="nav-item dropdown">
-				      <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
-				        Internaciones
-				      </a>
-				      <div class="dropdown-menu">
-				        <a class="dropdown-item" href="#">Solicitud</a>
-				        <a class="dropdown-item" href="#">Consulta de autorización</a>
-				        <a class="dropdown-item" href="#">Consulta internación</a>
-				        <a class="dropdown-item" href="#">Egreso</a>
-				      </div>
-				    </li>
-			    </ul>
-		  	</div>
-		  	<div class="col-4">
-				<ul class="navbar-nav col-4 offset-4">
-				    <li class="nav-item dropdown">
-				      <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
-				        Auditoría
-				      </a>
-				      <div class="dropdown-menu">
-				        <a class="dropdown-item" href="#">Solicitudes de auditoría</a>
-				        <a class="dropdown-item" href="#">Consulta</a>
-				      </div>
-				    </li>
-			    </ul>
-		  	</div>
-		  </nav>
+
+	<div th:replace="layout/layout :: navegador">
 	</div>
+	
+	
 	<div class="container col-12">
 		<div id="demo" class="carousel slide" data-ride="carousel">
 		
@@ -98,13 +45,7 @@
 	</div>
 	
 	<br><br><br>
-	<div class="col-12" id="pie" th:fragment="pie">
-	<br>
-		<div class="list-group text-center">
-		  <a href="#" class=" disabled">Clinica Modelo SRL</a>
-		  <a href="#" class=" disabled">Av. Directorio 8276</a>
-		  <a href="#" class="">Ciudad Autónoma de Buenos Aires</a>
-		</div>
+	<div th:replace="layout/layout :: pie">
 	</div>
 	<br>
 </body>

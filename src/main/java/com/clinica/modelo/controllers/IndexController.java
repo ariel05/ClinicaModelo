@@ -8,8 +8,20 @@ public class IndexController {
 
 	
 	@RequestMapping("/")
-	public String index() {
+	public String indexEmpty() {
 		
 		return "index";
+	}
+
+	@RequestMapping("/index")
+	public String index() {
+		
+		return indexEmpty();
+	}
+
+	@RequestMapping("/home")
+	public String home() {
+		
+		return indexEmpty();
 	}
 }

@@ -1,6 +1,6 @@
 <!doctype>
-<html>
-<head>
+<html  xmlns:th="http://www.thymeleaf.org">
+<head th:fragment="head">
 <title>Medicinal - Home</title>
 <meta charset="utf-8"/>
 
@@ -13,10 +13,13 @@
 	src="js/bootstrap.min.js"></script>
 
 <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+
+<link rel="stylesheet"
+	href="css/index/index.css">
 </head>
 
 <body>
-	<div class="shadow-none pt-2 pb-2 mb-1 bg-light rounded">
+	<div class="shadow-none pt-2 pb-2 mb-1 bg-light rounded col-12" id="navegador" th:fragment="navegador">
 		  <nav class="text-center row">
 		  	<div class="col-4">
 				<ul class="navbar-nav col-4 offset-4">
@@ -93,5 +96,16 @@
 		
 		</div>
 	</div>
+	
+	<br><br><br>
+	<div class="col-12" id="pie" th:fragment="pie">
+	<br>
+		<div class="list-group text-center">
+		  <a href="#" class=" disabled">Clinica Modelo SRL</a>
+		  <a href="#" class=" disabled">Av. Directorio 8276</a>
+		  <a href="#" class="">Ciudad Autónoma de Buenos Aires</a>
+		</div>
+	</div>
+	<br>
 </body>
 </html>

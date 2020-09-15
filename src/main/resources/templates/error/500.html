@@ -1,0 +1,28 @@
+<!doctype>
+<html  xmlns:th="http://www.thymeleaf.org">
+<head th:replace="layout/layout :: head">
+</head>
+<head>
+	<title>Medicinal - Error 505</title>
+	<meta charset="utf-8"/>
+</head>
+
+<body>
+
+	<div th:replace="layout/layout :: navegador">
+	</div>
+	
+	
+	<div class="container col-12">
+		<h2 class="text-center">Oppps ha ocurrido un error</h2>
+		<img class="col-12 offset-0 col-sm-6 offset-sm-3" src="img/tenor.gif"/>
+		<div  class="text-center" th:text="${error}"></div>
+		<div  class="text-center" th:text="${message}"></div>
+	</div>
+	
+	<br><br><br>
+	<div th:replace="layout/layout :: pie">
+	</div>
+	<br>
+</body>
+</html>

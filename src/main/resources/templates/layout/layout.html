@@ -74,6 +74,28 @@
 		  </nav>
 	</div>
 
+
+	<!-- BUSQUEDA AFILIADO -->
+		<form class="form-group col-12 col-sm-8 offset-sm-2 col-lg-4 offset-lg-4 mt-5" action="/busquedaAfiliado" th:fragment="busquedaAfiliado">
+		  <h3 class="text-center">Busqueda de afiliado</h3>
+		  <div class="form-group">
+			  <label for="name">Tipo documentación:</label>
+			  <select class="form-control">
+			  	<option>-- Seleccione --</option>
+			  	<option value="1">DNI</option>
+			  	<option value="2">PASAPORTE</option>
+			  	<option value="3">LDC</option>
+			  </select>
+			  <label for="documentacion">Numero:</label>
+			  <input type="number" class="form-control" placeholder="Ingrese el numero" id="numero">
+		  </div>
+		  <label for="name">Nombre:</label>
+		  <input type="text" class="form-control" placeholder="Ingrese nombre" id="name">
+		  <label for="surname">Apellido:</label>
+		  <input type="text" class="form-control" placeholder="Ingrese apellido" id="surname">
+		  <button type="submit" class="btn btn-primary col-12 col-sm-8 offset-sm-2 col-lg-4 offset-lg-4 mt-2">Buscar</button>
+		</form>
+
 	<!-- PIE LAYOUT -->
 
 	<div class="col-12" id="pie" th:fragment="pie">

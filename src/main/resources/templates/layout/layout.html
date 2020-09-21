@@ -87,15 +87,40 @@
 			  	<option value="3">LDC</option>
 			  </select>
 			  <label for="documentacion">Numero:</label>
-			  <input type="number" class="form-control" placeholder="Ingrese el numero" id="numero">
+			  <input type="number" class="form-control" placeholder="Ingrese el numero" id="numero" name="dni">
 		  </div>
 		  <label for="name">Nombre:</label>
-		  <input type="text" class="form-control" placeholder="Ingrese nombre" id="name">
+		  <input type="text" class="form-control" placeholder="Ingrese nombre" id="name" name="nombre">
 		  <label for="surname">Apellido:</label>
-		  <input type="text" class="form-control" placeholder="Ingrese apellido" id="surname">
+		  <input type="text" class="form-control" placeholder="Ingrese apellido" id="surname" name="apellido">
 		  <input type="hidden" th:value="${request}" name="request"/>
 		  <button type="submit" class="btn btn-primary col-12 col-sm-8 offset-sm-2 col-lg-4 offset-lg-4 mt-2">Buscar</button>
 		</form>
+		
+		<div th:fragment="afiliadoEncontrado" th:if="${not #lists.isEmpty(afiliados)}">
+			<div class="container">
+			  <h2>Hover Rows</h2>
+			  <p>The .table-hover class enables a hover state (grey background on mouse over) on table rows:</p>            
+			  <table class="table table-hover">
+			    <thead>
+			      <tr>
+			        <th>Nombre</th>
+			        <th>Apellido</th>
+			        <th>DNI</th>
+			        <th></th>
+			      </tr>
+			    </thead>
+			    <tbody>
+			      <tr th:each="af : ${afiliados}">
+			        <td th:text="${af.nombre}"></td>
+			        <td th:text="${af.apellido}"></td>
+			        <td th:text="${af.dni}"></td>
+			        <td><button type="button" class="btn btn-success">Seleccionar</button></td>
+			      </tr>
+			    </tbody>
+			  </table>
+			</div>
+		</div>
 
 	<!-- PIE LAYOUT -->
 

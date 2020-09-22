@@ -33,9 +33,8 @@ public class BusquedaAfiliadoController {
 			}
 		}
 		
-		if(!afiliadosFiltrados.isEmpty()) {
-			model.addAttribute("afiliados", afiliadosFiltrados);
-		}
+		model.addAttribute("afiliados", afiliadosFiltrados);
+		model.addAttribute("request", request);
 		
 		if(request.equals(ConstantsHelper.ATENCION_AMBULATORIA))
 			return "ambulatorio/atencionAmbulatoria";

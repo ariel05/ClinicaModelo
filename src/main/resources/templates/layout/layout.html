@@ -97,8 +97,8 @@
 		  <button type="submit" class="btn btn-primary col-12 col-sm-8 offset-sm-2 col-lg-4 offset-lg-4 mt-2">Buscar</button>
 		</form>
 		
-		<div th:fragment="afiliadoEncontrado" th:if="${not #lists.isEmpty(afiliados)}">
-			<div class="container">
+		<div th:fragment="afiliadoEncontrado">
+			<div class="container" th:if="${not #lists.isEmpty(afiliados)}">
 			  <h2>Hover Rows</h2>
 			  <p>The .table-hover class enables a hover state (grey background on mouse over) on table rows:</p>            
 			  <table class="table table-hover">
@@ -116,6 +116,25 @@
 			        <td th:text="${af.apellido}"></td>
 			        <td th:text="${af.dni}"></td>
 			        <td><button type="button" class="btn btn-success">Seleccionar</button></td>
+			      </tr>
+			    </tbody>
+			  </table>
+			</div>
+			<div class="container" th:if="${afiliados != null && #lists.isEmpty(afiliados)}">
+			  <h2>Hover Rows</h2>
+			  <p>The .table-hover class enables a hover state (grey background on mouse over) on table rows:</p>            
+			  <table class="table table-hover">
+			    <thead>
+			      <tr>
+			        <th>Nombre</th>
+			        <th>Apellido</th>
+			        <th>DNI</th>
+			        <th></th>
+			      </tr>
+			    </thead>
+			    <tbody>
+			      <tr>
+			        <td>No se encontraron resultados</td>
 			      </tr>
 			    </tbody>
 			  </table>
